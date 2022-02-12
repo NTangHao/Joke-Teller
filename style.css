@@ -1,0 +1,116 @@
+/*Google font*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Luxurious+Roman&family=Merriweather:wght@300&family=Roboto+Slab&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: whitesmoke;
+    font-family: Roboto Slab, sans-serif;
+}
+
+.container {
+    height: 100vh; /*rong 100% so voi viewport: view dynamic scale khi là mobile*/
+    width: 100vw;
+    display: flex;
+    flex-direction: column;/*Nhiều item thì chồng lên nhau*/
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background: #FFFFCC url("./image_processing20210907-23685-uo9sgq.gif") no-repeat ;
+    background-position: left center;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    margin: 15px;
+    font-family:Roboto Slab, 'sans-serif' ;
+    font-size: 20px;
+    color: white;
+    background: #3F4754;
+    border-radius: 7px;
+    border: none;
+box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+
+}
+button:hover{
+    filter: brightness(0.95);
+
+}
+button:active{
+    transform: scale(0.95);
+}
+
+button:disabled{
+    cursor: default;
+    filter: brightness(0.3);
+}
+/*Media QueryL: tablet, smaller*/
+
+.displayText {
+    position: relative;
+    margin-bottom: 25px;
+    max-width: 360px;
+    max-height: 250px;
+    padding: 5px;
+    background: #541212;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: #EEEEEE solid 1px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    color: #EEEEEE;
+    font-weight: 700;
+    text-align: center;
+}
+
+.displayText:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #541212 transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -20px;
+    left: 165px;
+}
+
+.displayText:before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    bottom: -21px;
+    left: 165px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container{
+        background-size: cover;
+        background-position:  center;
+
+    }
+    button{
+        box-shadow: 5px 5px 30px 10px rgba(0,0,0,0.6);;
+    }
+
+
+    
+}
+
+
+
+
+
